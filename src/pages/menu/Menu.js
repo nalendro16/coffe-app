@@ -1,3 +1,5 @@
+import Slideshow from '../../components/Slideshow'
+
 export default function Menu() {
-  return <div>Menu</div>
+  return <Slideshow />
 }

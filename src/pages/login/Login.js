@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useStore } from '../../zustand/Store'
 
 import imgSrc from '../../Assets/logo technopartner.png'
 import style from './Login.module.css'
@@ -9,6 +10,7 @@ export default function Login() {
   const [password, setPassword] = useState('')
   const [tanggapan, setTanggapan] = useState({})
   const navigate = useNavigate()
+  const updateState = useStore((state) => state.updateRespond)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -34,6 +36,10 @@ export default function Login() {
       body: JSON.stringify(data),
     })
     return response.json().then((res) => {
+      updateState({
+        token_type: res.token_type,
+        access_token: res.access_token,
+      })
       setTanggapan(res)
     })
   }
@@ -46,7 +52,6 @@ export default function Login() {
     check()
   }, [navigate, tanggapan.token_type])
 
-  console.log(tanggapan)
   return (
     <div className={style.login}>
       <img src={imgSrc} alt="technopartner indonesia" />
