@@ -1,0 +1,12 @@
+.navbar {
+  width: 100vw;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+}
+.navbar img {
+  max-width: 30px;
+}

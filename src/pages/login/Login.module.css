@@ -1,0 +1,38 @@
+.login {
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+}
+.login img {
+  margin: 10vh auto;
+  max-width: 70vw;
+}
+.login input {
+  width: 50vw;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px -4px #7a7a7a;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login label {
+  width: fit-content;
+  margin: 10px auto;
+}
+.login span {
+  margin-bottom: 5px;
+  display: block;
+}
+.login button {
+  background-color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  width: 25vw;
+  box-shadow: 0px 0px 8px -4px #7a7a7a;
+}
